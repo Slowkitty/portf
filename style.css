@@ -32,6 +32,7 @@ main{
     max-width: 420px;
     margin: auto;
     display: flex;
+    background-color: aliceblue;
 }
 
 footer{
@@ -54,20 +55,28 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ff8800; 
-    border-radius: 20px;
+    background-color:#ffee00; 
+    border-radius: 0px;
     width: 100%;
     max-width: 120px;
+    height: 100%;
     margin-left: auto;
     margin-right: 20px;
     text-align: center;
-    transition: all 0.5s ease; 
+    transition: all 3.0s ease; 
 }
+
+
+
 
 .hidden {
     height: 0;
     overflow: hidden;
-    transition: height 0.5s ease;
+    transition: height 3.5s ease;
+  }
+
+  .hidden :hover{
+    background-color: #000000;
   }
 
 .dancing-script-fonte{
@@ -81,7 +90,11 @@ footer{
 .style-links:hover img{
     color: #fff700;
     transform: scale(1.2);
+    transition: all 0.5s ease;
+    
 }
+
+
 
 .style-links{
     text-decoration: none;
@@ -92,12 +105,27 @@ footer{
     max-width: 40px;
     margin-top: 20px;
     border: 10px;
+    transition: transform 0.3s ease;
 }
 
 .conteiner-principal{
     display: flex;
+    margin-top: 20px;
 }
 
+
+
+
+.aside1{
+    width: 100%;
+    max-width: 420px;
+    
+    background-color: rgb(255, 255, 255);
+}
+
+.aside2{
+    background-color: #f8ac07;
+}
 
 #overlay {
     position: absolute;
@@ -122,6 +150,7 @@ footer{
 
 #socialContainer {
     transition: all 0.5s ease;
+    
   }
 
   #showSocial {
@@ -131,7 +160,6 @@ footer{
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
     transition: background-color 0.3s ease;
     margin-left: auto;
    
@@ -150,11 +178,5 @@ footer{
     border-radius: 50%;
     box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.068);
     position: absolute;
-    pointer-events: none; /* to make sure the circle doesn't interfere with mouse events */
-  }
-
-  @media  and(max-width: 500px) {
-    .top{
-        width: 20%;
-    }
+    pointer-events: none; 
   }
