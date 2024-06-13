@@ -23,24 +23,28 @@ nav{
 
 body{
    
-    background: linear-gradient(to right, #fffb00a6, #ffffff);
-    background-size: 100% 200%;
+    background: linear-gradient(to right, white, yellow);
+    background-size: 200% 100%;
+    animation: gradient 3s linear infinite;
 }
 
 main{
+    text-align: center;
     width: 100%;
     max-width: 420px;
     margin: auto;
     display: flex;
-    background-color: aliceblue;
+    background-color: rgba(246, 246, 246, 0.68);
+    border-radius: 3px;
+    box-shadow: 2px 3px 4px 2px;
 }
 
 footer{
     background-color: #000000;
     bottom: 0;
+    text-align: center;
+    margin-top:484px ;
 }
-
-
 
 .top{
     display: flex;
@@ -100,6 +104,7 @@ footer{
     text-decoration: none;
     margin: auto;
 }
+
 .style-links img{
     width: 100%;
     max-width: 40px;
@@ -114,18 +119,57 @@ footer{
 }
 
 
-
-
 .aside1{
+    text-align: center;
     width: 100%;
     max-width: 420px;
-    
-    background-color: rgb(255, 255, 255);
+    margin: auto;
+    background-color: rgba(246, 246, 246, 0.68);
+    border-radius: 3px;
+    box-shadow: 2px 3px 4px 2px;
 }
 
 .aside2{
-    background-color: #f8ac07;
+    text-align: center;
+    
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    
+    background-color: rgba(246, 246, 246, 0.68);
+    border-radius: 3px;
+    box-shadow: 2px 3px 4px 2px;
+   
 }
+
+.zoom{
+    transition: all 0.3s ease;  
+}
+
+.zoom:hover{
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+
+.aside2-imagem{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.aside2-imagem img{
+    width: 100%;
+    max-width: 80px;
+}
+
+.aside2-imagem a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
 
 #overlay {
     position: absolute;
@@ -170,13 +214,25 @@ footer{
   }
 
 
-  #circle {
-    width: 70px;
-    height: 70px;
-    background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.082);
-    border-radius: 50%;
-    box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.068);
-    position: absolute;
-    pointer-events: none; 
-  }
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@media  screen and (max-width: 920px){
+    
+    .conteiner-principal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aside2{
+        margin-top: 50px;
+    }
+    
+    
+}
